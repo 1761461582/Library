@@ -1,14 +1,14 @@
 //
 //  ViewController.h
-//  c2
+//  a1
 //
-//  Created by hy on 15/7/5.
+//  Created by hy on 15/7/28.
 //  Copyright (c) 2015年 com.yuanchuanglian. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewControllers : UIViewController
+@interface ViewController : UIViewController
 
 
 @end
