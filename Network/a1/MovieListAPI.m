@@ -14,8 +14,7 @@
 
 -(NSString*)serviceType
 {
-    //return kAIFServiceAnjukeREST_4;
-    return @"admin/versionupgrade";
+    return kAIFServiceAnjukeREST_4;
 }
 
 -(NSString*)methodName

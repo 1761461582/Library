@@ -10,6 +10,5 @@
 #import "Components/Components/RTAPIBaseManager.h"
 
 @interface MovieListAPI : RTAPIBaseManager<RTAPIManager>
-//@interface MovieListAPI : NSObject
 
 @end
