@@ -6,7 +6,8 @@
 //  Copyright (c) 2014年 anjuke. All rights reserved.
 //
 
-#import <AFNetworking/AFNetworking.h>
+//#import <AFNetworking/AFNetworking.h>
+#import "AFNetworking.h"
 #import "AIFApiProxy.h"
 #import "AIFServiceFactory.h"
 #import "AIFRequestGenerator.h"

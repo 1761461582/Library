@@ -13,7 +13,8 @@
 #import "NSDictionary+AXNetworkingMethods.h"
 #import "AIFNetworkingConfiguration.h"
 #import "NSObject+AXNetworkingMethods.h"
-#import <AFNetworking/AFNetworking.h>
+//#import <AFNetworking/AFNetworking.h>
+#import "AFNetworking.h"
 #import "AIFService.h"
 #import "NSObject+AXNetworkingMethods.h"
 #import "AIFLogger.h"

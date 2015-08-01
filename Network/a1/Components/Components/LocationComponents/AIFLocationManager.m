@@ -8,6 +8,7 @@
 
 #import "AIFLocationManager.h"
 #import "AIFNetworking.h"
+#import <UIKit/UIKit.h>
 
 NSString * const AJKHDLocationManagerDidSuccessedLocateNotification = @"AJKHDLocationManagerDidSuccessedLocateNotification";
 NSString * const AJKHDLocationManagerDidFailedLocateNotification = @"AJKHDLocationManagerDidFailedLocateNotification";

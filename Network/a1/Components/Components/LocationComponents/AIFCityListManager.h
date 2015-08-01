@@ -8,6 +8,7 @@
 
 #import "RTAPIBaseManager.h"
 #import <CoreLocation/CoreLocation.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 @interface AIFCityListManager : RTAPIBaseManager<RTAPIManager, RTAPIManagerApiCallBackDelegate, RTAPIManagerParamSourceDelegate, RTAPIManagerValidator>
 

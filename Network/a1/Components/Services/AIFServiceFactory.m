@@ -8,7 +8,7 @@
 
 #import "AIFServiceFactory.h"
 #import "AIFService.h"
-
+/*
 // anjuke
 #import "AIFServiceAnjuke.h"
 #import "AIFServiceAnjukeREST_4.h"
@@ -44,6 +44,8 @@
 #import "AIFServiceNotification.h"
 #import "AIFServiceTrace.h"
 #import "AIFServiceURLChange.h"
+
+ */
 
 // Google Map API
 #import "AIFServiceGoogleMapDirections.h"
@@ -130,6 +132,7 @@ NSString * const kAIFServiceGoogleMapAPIDirections = @"kAIFServiceGoogleMapAPIDi
 #pragma mark - private methods
 - (AIFService<AIFServiceProtocal> *)newServiceWithIdentifier:(NSString *)identifier
 {
+/*
     // anjuke
     if ([identifier isEqualToString:kAIFServiceAnjuke]) {
         return [[AIFServiceAnjuke alloc] init];
@@ -209,7 +212,8 @@ NSString * const kAIFServiceGoogleMapAPIDirections = @"kAIFServiceGoogleMapAPIDi
     if ([identifier isEqualToString:kAIFServiceURLChange]) {
         return [[AIFServiceURLChange alloc] init];
     }
-    
+
+ */
     // Google Map API
     if ([identifier isEqualToString:kAIFServiceGoogleMapAPIDirections]) {
         return [[AIFServiceGoogleMapDirections alloc] init];
