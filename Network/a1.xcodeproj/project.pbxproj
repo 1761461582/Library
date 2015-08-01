@@ -36,6 +36,7 @@
 		0405EBBA1B6C6B7A003D3EB1 /* AIFPListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0405EBB91B6C6B7A003D3EB1 /* AIFPListManager.m */; };
 		0405EBC01B6C6BA5003D3EB1 /* AIFLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0405EBBD1B6C6BA5003D3EB1 /* AIFLogger.m */; };
 		0405EBC11B6C6BA5003D3EB1 /* AIFLoggerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 0405EBBF1B6C6BA5003D3EB1 /* AIFLoggerConfiguration.m */; };
+		0405EBC81B6CD0CE003D3EB1 /* AIFServiceDoubanMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 0405EBC71B6CD0CE003D3EB1 /* AIFServiceDoubanMovie.m */; };
 		043AA7CD1B6A677E005108BE /* MovieListAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 043AA7CC1B6A677E005108BE /* MovieListAPI.m */; };
 		044529731B6832F900DEA4E5 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 044529611B6832F900DEA4E5 /* AFHTTPRequestOperation.m */; };
 		044529741B6832F900DEA4E5 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 044529631B6832F900DEA4E5 /* AFHTTPRequestOperationManager.m */; };
@@ -122,6 +123,8 @@
 		0405EBBF1B6C6BA5003D3EB1 /* AIFLoggerConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIFLoggerConfiguration.m; path = Components/Components/LogComponents/AIFLoggerConfiguration.m; sourceTree = "<group>"; };
 		0405EBC31B6C6BFC003D3EB1 /* AIFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIFNetworking.h; path = Components/AIFNetworking.h; sourceTree = "<group>"; };
 		0405EBC41B6C6BFC003D3EB1 /* AIFNetworkingConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIFNetworkingConfiguration.h; path = Components/AIFNetworkingConfiguration.h; sourceTree = "<group>"; };
+		0405EBC61B6CD0CE003D3EB1 /* AIFServiceDoubanMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIFServiceDoubanMovie.h; path = Components/Services/DoubanMovie/AIFServiceDoubanMovie.h; sourceTree = "<group>"; };
+		0405EBC71B6CD0CE003D3EB1 /* AIFServiceDoubanMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIFServiceDoubanMovie.m; path = Components/Services/DoubanMovie/AIFServiceDoubanMovie.m; sourceTree = "<group>"; };
 		043AA7CB1B6A677E005108BE /* MovieListAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieListAPI.h; sourceTree = "<group>"; };
 		043AA7CC1B6A677E005108BE /* MovieListAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieListAPI.m; sourceTree = "<group>"; };
 		044529601B6832F900DEA4E5 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = AFNetworking/AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -219,6 +222,7 @@
 		0405EB911B6C6AB4003D3EB1 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				0405EBC51B6CCC99003D3EB1 /* DoubanMovie */,
 				0405EB981B6C6AE2003D3EB1 /* GoogleMap */,
 				0405EB921B6C6ADE003D3EB1 /* AIFService.h */,
 				0405EB931B6C6ADE003D3EB1 /* AIFService.m */,
@@ -309,6 +313,15 @@
 				0405EB6B1B6C69DD003D3EB1 /* Category */,
 			);
 			name = AIF;
+			sourceTree = "<group>";
+		};
+		0405EBC51B6CCC99003D3EB1 /* DoubanMovie */ = {
+			isa = PBXGroup;
+			children = (
+				0405EBC61B6CD0CE003D3EB1 /* AIFServiceDoubanMovie.h */,
+				0405EBC71B6CD0CE003D3EB1 /* AIFServiceDoubanMovie.m */,
+			);
+			name = DoubanMovie;
 			sourceTree = "<group>";
 		};
 		043AA7CA1B6A6736005108BE /* WebAPI */ = {
@@ -548,6 +561,7 @@
 				0405EB801B6C6A80003D3EB1 /* NSObject+AXNetworkingMethods.m in Sources */,
 				0405EBB61B6C6B5A003D3EB1 /* AIFLocationManager.m in Sources */,
 				0405EB9B1B6C6AF1003D3EB1 /* AIFServiceGoogleMapDirections.m in Sources */,
+				0405EBC81B6CD0CE003D3EB1 /* AIFServiceDoubanMovie.m in Sources */,
 				0405EB811B6C6A80003D3EB1 /* NSString+AXNetworkingMethods.m in Sources */,
 				0405EB8F1B6C6AAF003D3EB1 /* AIFSignatureGenerator.m in Sources */,
 				0405EBB51B6C6B5A003D3EB1 /* AIFCityListManager.m in Sources */,

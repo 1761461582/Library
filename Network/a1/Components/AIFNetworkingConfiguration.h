@@ -73,4 +73,6 @@ extern NSString * const kAIFServiceURLChange;
 // Google Map API
 extern NSString * const kAIFServiceGoogleMapAPIDirections;
 
+//Douban Movie API
+extern NSString * const kAIFServiceDoubanMovie;
 #endif

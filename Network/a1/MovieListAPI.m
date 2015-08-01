@@ -14,17 +14,17 @@
 
 -(NSString*)serviceType
 {
-    return kAIFServiceAnjukeREST_4;
+    return kAIFServiceDoubanMovie;
 }
 
 -(NSString*)methodName
 {
-    return @"admin/versionupgrade";
+    return @"movie/top250";
 }
 
 -(RTAPIManagerRequestType)requestType
 {
-    return RTAPIManagerRequestTypeRestGet;
+    return RTAPIManagerRequestTypeGet;
 }
 
 @end

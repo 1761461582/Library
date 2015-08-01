@@ -50,6 +50,9 @@
 // Google Map API
 #import "AIFServiceGoogleMapDirections.h"
 
+//Douban Movie API
+#import "AIFServiceDoubanMovie.h"
+
 /*************************************************************************/
 
 // anjuke
@@ -91,6 +94,8 @@ NSString * const kAIFServiceURLChange = @"kAIFServiceURLChange";
 // Google Map API
 NSString * const kAIFServiceGoogleMapAPIDirections = @"kAIFServiceGoogleMapAPIDirections";
 
+//Douban Movie API
+NSString * const kAIFServiceDoubanMovie = @"kAIFServiceDoubanMovie";
 
 @interface AIFServiceFactory ()
 
@@ -217,6 +222,11 @@ NSString * const kAIFServiceGoogleMapAPIDirections = @"kAIFServiceGoogleMapAPIDi
     // Google Map API
     if ([identifier isEqualToString:kAIFServiceGoogleMapAPIDirections]) {
         return [[AIFServiceGoogleMapDirections alloc] init];
+    }
+    
+    // Douban Movie API
+    if ([identifier isEqualToString:kAIFServiceDoubanMovie]) {
+        return [[AIFServiceDoubanMovie alloc] init];
     }
     
     return nil;
