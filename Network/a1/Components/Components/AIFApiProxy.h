@@ -23,6 +23,8 @@ typedef void(^AXCallback)(AIFURLResponse *response);
 
 - (NSInteger)callGoogleMapAPIWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)serviceIdentifier success:(AXCallback)success fail:(AXCallback)fail;
 
+- (NSInteger)callGETWithParamsAndURLFormatString:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSString *)methodName URLFormatString:(NSString*)format success:(AXCallback)success fail:(AXCallback)fail;
+
 - (void)cancelRequestWithRequestID:(NSNumber *)requestID;
 - (void)cancelRequestWithRequestIDList:(NSArray *)requestIDList;
 

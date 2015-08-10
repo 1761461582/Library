@@ -8,9 +8,14 @@
 
 #import "ViewController.h"
 #import "MovieListAPI.h"
+#import "DoubanMovieReformer.h"
 
-@interface ViewController ()<RTAPIManagerApiCallBackDelegate,RTAPIManagerValidator>
+#import "MovieListController.h"
+
+
+@interface ViewController ()<RTAPIManagerApiCallBackDelegate,RTAPIManagerValidator,RTAPIManagerParamSourceDelegate>
 @property (nonatomic,strong) MovieListAPI *movieListWebAPI;
+@property (nonatomic,strong) id<RTAPIManagerCallbackDataReformer> movieReformer;
 @end
 
 @implementation ViewController
@@ -26,7 +31,9 @@
 }
 
 - (IBAction)getMovieList:(id)sender {
-    [self.movieListWebAPI loadData];
+    //[self.movieListWebAPI loadData];
+    MovieListController *vc = [[MovieListController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma - mark RTAPIManagerApiCallBackDelegate
@@ -34,6 +41,7 @@
 {
     NSLog(@"Successfully");
     NSDictionary *data = [manager fetchDataWithReformer:nil];
+    //NSDictionary *data = [manager fetchDataWithReformer:self.movieReformer];
     NSLog(@"%@", data);
 }
 
@@ -54,14 +62,38 @@
     return TRUE;
 }
 
+#pragma - mark RTAPIManagerParamSourceDelegate
+- (NSDictionary*)paramsForApi:(RTAPIBaseManager *)manager
+{
+    NSDictionary *param = nil;
+    
+    if ([manager isKindOfClass:[MovieListAPI class]]) {
+        param =   @{@"start":@"3",
+                    @"count":@"1"};
+    }
+
+    return param;
+}
+
+
+
 -(MovieListAPI*)movieListWebAPI
 {
     if (_movieListWebAPI == nil) {
         _movieListWebAPI = [[MovieListAPI alloc] init];
         _movieListWebAPI.delegate = self;
         _movieListWebAPI.validator = self;
+        _movieListWebAPI.paramSource = self;
     }
     return _movieListWebAPI;
+}
+
+-(id<RTAPIManagerCallbackDataReformer>)movieReformer
+{
+    if (_movieReformer == nil) {
+        _movieReformer = [[DoubanMovieReformer alloc] init];
+    }
+    return _movieReformer;
 }
 
 

@@ -55,14 +55,20 @@
     AIFService *service = [[AIFServiceFactory sharedInstance] serviceWithIdentifier:serviceIdentifier];
     
     NSMutableDictionary *sigParams = [NSMutableDictionary dictionaryWithDictionary:requestParams];
+    
+    /*
     sigParams[@"api_key"] = service.publicKey;
     NSString *signature = [AIFSignatureGenerator signGetWithSigParams:sigParams methodName:methodName apiVersion:service.apiVersion privateKey:service.privateKey publicKey:service.publicKey];
     
     NSMutableDictionary *allParams = [NSMutableDictionary dictionaryWithDictionary:[AIFCommonParamsGenerator commonParamsDictionary]];
     [allParams addEntriesFromDictionary:sigParams];
+    
     NSString *urlString = [NSString stringWithFormat:@"%@%@/%@?%@&sig=%@", service.apiBaseUrl, service.apiVersion, methodName, [allParams AIF_urlParamsStringSignature:NO], signature];
+    */
+    NSString *urlString = [NSString stringWithFormat:@"%@%@/%@?%@", service.apiBaseUrl, service.apiVersion, methodName, [sigParams AIF_urlParamsStringSignature:NO]];
     
     NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"GET" URLString:urlString parameters:nil error:NULL];
+
     request.timeoutInterval = kAIFNetworkingTimeoutSeconds;
     request.requestParams = requestParams;
     [AIFLogger logDebugInfoWithRequest:request apiName:methodName service:service requestParams:requestParams httpMethod:@"GET"];
@@ -129,6 +135,22 @@
     [request setValue:@"zh-CN,zh;q=0.8,en;q=0.6" forHTTPHeaderField:@"Accept-Language"];
     request.requestParams = requestParams;
     [AIFLogger logDebugInfoWithRequest:request apiName:@"Google Map API" service:service requestParams:requestParams httpMethod:@"GET"];
+    return request;
+}
+
+- (NSURLRequest *)generateGETRequestWithServiceIdentifierAndURLFormatString:(NSString *)serviceIdentifier requestParams:(NSDictionary *)requestParams methodName:(NSString *)methodName URLFormatString:(NSString*)format /* such as @"%@%@?%@" */
+{
+    AIFService *service = [[AIFServiceFactory sharedInstance] serviceWithIdentifier:serviceIdentifier];
+    
+    NSMutableDictionary *sigParams = [NSMutableDictionary dictionaryWithDictionary:requestParams];
+    
+    NSString *urlString = [NSString stringWithFormat:format, service.apiBaseUrl, service.apiVersion, methodName, [sigParams AIF_urlParamsStringSignatureWithValue:NO]];
+    
+    NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:@"GET" URLString:urlString parameters:nil error:NULL];
+    
+    request.timeoutInterval = kAIFNetworkingTimeoutSeconds;
+    request.requestParams = requestParams;
+    [AIFLogger logDebugInfoWithRequest:request apiName:methodName service:service requestParams:requestParams httpMethod:@"GET"];
     return request;
 }
 

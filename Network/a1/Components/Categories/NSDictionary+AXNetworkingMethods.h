@@ -14,4 +14,6 @@
 - (NSString *)AIF_jsonString;
 - (NSArray *)AIF_transformedUrlParamsArraySignature:(BOOL)isForSignature;
 
+- (NSString *)AIF_urlParamsStringSignatureWithValue:(BOOL)isForSignature;
+- (NSArray *)AIF_transformedUrlParamsArraySignatureWithValue:(BOOL)isForSignature;
 @end

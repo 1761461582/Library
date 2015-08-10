@@ -93,6 +93,14 @@ static NSString * const kAXApiProxyDispatchItemKeyCallbackFail = @"kAXApiProxyDi
     return [requestId integerValue];
 }
 
+- (NSInteger)callGETWithParamsAndURLFormatString:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSString *)methodName URLFormatString:(NSString*)format success:(AXCallback)success fail:(AXCallback)fail
+{
+    NSURLRequest *request = [[AIFRequestGenerator sharedInstance] generateGETRequestWithServiceIdentifierAndURLFormatString:servieIdentifier requestParams:params methodName:methodName URLFormatString:format];
+
+    NSNumber *requestId = [self callApiWithRequest:request success:success fail:fail];
+    return [requestId integerValue];
+}
+
 - (void)cancelRequestWithRequestID:(NSNumber *)requestID
 {
     NSOperation *requestOperation = self.dispatchTable[requestID];

@@ -13,4 +13,5 @@
 - (NSString *)AX_paramsString;
 - (NSString *)AX_jsonString;
 
+- (NSString *)AX_paramsStringWithSlash;
 @end

@@ -20,4 +20,6 @@
 
 - (NSURLRequest *)generateGoolgeMapAPIRequestWithParams:(NSDictionary *)requestParams serviceIdentifier:(NSString *)serviceIdentifier;
 
+- (NSURLRequest *)generateGETRequestWithServiceIdentifierAndURLFormatString:(NSString *)serviceIdentifier requestParams:(NSDictionary *)requestParams methodName:(NSString *)methodName URLFormatString:(NSString*)format;
+
 @end

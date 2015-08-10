@@ -6,6 +6,8 @@
 //  Copyright (c) 2013年 anjuke inc. All rights reserved.
 //
 
+//todo : add delegate for GetURLFormatString
+
 #import <Foundation/Foundation.h>
 #import "AIFURLResponse.h"
 
@@ -217,6 +219,7 @@ typedef NS_ENUM (NSUInteger, RTAPIManagerErrorType){
 
 typedef NS_ENUM (NSUInteger, RTAPIManagerRequestType){
     RTAPIManagerRequestTypeGet,
+    RTAPIManagerRequestTypeGetWithURLFormat,
     RTAPIManagerRequestTypePost,
     RTAPIManagerRequestTypeRestGet,
     RTAPIManagerRequestTypeRestPost

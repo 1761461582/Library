@@ -37,6 +37,7 @@
 		0405EBC01B6C6BA5003D3EB1 /* AIFLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0405EBBD1B6C6BA5003D3EB1 /* AIFLogger.m */; };
 		0405EBC11B6C6BA5003D3EB1 /* AIFLoggerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 0405EBBF1B6C6BA5003D3EB1 /* AIFLoggerConfiguration.m */; };
 		0405EBC81B6CD0CE003D3EB1 /* AIFServiceDoubanMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 0405EBC71B6CD0CE003D3EB1 /* AIFServiceDoubanMovie.m */; };
+		0405EBCC1B6CF181003D3EB1 /* DoubanMovieReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0405EBCB1B6CF181003D3EB1 /* DoubanMovieReformer.m */; };
 		043AA7CD1B6A677E005108BE /* MovieListAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 043AA7CC1B6A677E005108BE /* MovieListAPI.m */; };
 		044529731B6832F900DEA4E5 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 044529611B6832F900DEA4E5 /* AFHTTPRequestOperation.m */; };
 		044529741B6832F900DEA4E5 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 044529631B6832F900DEA4E5 /* AFHTTPRequestOperationManager.m */; };
@@ -47,6 +48,13 @@
 		044529791B6832F900DEA4E5 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445296E1B6832F900DEA4E5 /* AFURLRequestSerialization.m */; };
 		0445297A1B6832F900DEA4E5 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 044529701B6832F900DEA4E5 /* AFURLResponseSerialization.m */; };
 		0445297B1B6832F900DEA4E5 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 044529721B6832F900DEA4E5 /* AFURLSessionManager.m */; };
+		04508ED51B6D7BCB00028E10 /* MovieListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04508ED41B6D7BCB00028E10 /* MovieListController.m */; };
+		04508ED91B6DC69E00028E10 /* MovieItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04508ED81B6DC69E00028E10 /* MovieItem.m */; };
+		046E0FE71B76CEFD00F3B3FD /* MovieDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 046E0FE51B76CEFD00F3B3FD /* MovieDetailVC.m */; };
+		046E0FE81B76CEFD00F3B3FD /* MovieDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046E0FE61B76CEFD00F3B3FD /* MovieDetailVC.xib */; };
+		048464D21B74DB81002DAFEA /* MovieDetailItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 048464D11B74DB81002DAFEA /* MovieDetailItem.m */; };
+		048464D51B74E8A1002DAFEA /* MovieDetailAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 048464D41B74E8A1002DAFEA /* MovieDetailAPI.m */; };
+		0489382B1B774F52007F4CDE /* DoubanMovieDetailReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0489382A1B774F52007F4CDE /* DoubanMovieDetailReformer.m */; };
 		04A5F9561B67B61C00BA6440 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5F9551B67B61C00BA6440 /* main.m */; };
 		04A5F9591B67B61C00BA6440 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5F9581B67B61C00BA6440 /* AppDelegate.m */; };
 		04A5F95C1B67B61C00BA6440 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5F95B1B67B61C00BA6440 /* ViewController.m */; };
@@ -125,6 +133,9 @@
 		0405EBC41B6C6BFC003D3EB1 /* AIFNetworkingConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIFNetworkingConfiguration.h; path = Components/AIFNetworkingConfiguration.h; sourceTree = "<group>"; };
 		0405EBC61B6CD0CE003D3EB1 /* AIFServiceDoubanMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIFServiceDoubanMovie.h; path = Components/Services/DoubanMovie/AIFServiceDoubanMovie.h; sourceTree = "<group>"; };
 		0405EBC71B6CD0CE003D3EB1 /* AIFServiceDoubanMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIFServiceDoubanMovie.m; path = Components/Services/DoubanMovie/AIFServiceDoubanMovie.m; sourceTree = "<group>"; };
+		0405EBCA1B6CF181003D3EB1 /* DoubanMovieReformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoubanMovieReformer.h; path = Reformer/DoubanMovieReformer.h; sourceTree = "<group>"; };
+		0405EBCB1B6CF181003D3EB1 /* DoubanMovieReformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubanMovieReformer.m; path = Reformer/DoubanMovieReformer.m; sourceTree = "<group>"; };
+		0405EBCD1B6CF765003D3EB1 /* PropertyListKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PropertyListKeys.h; path = Reformer/PropertyListKeys.h; sourceTree = "<group>"; };
 		043AA7CB1B6A677E005108BE /* MovieListAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieListAPI.h; sourceTree = "<group>"; };
 		043AA7CC1B6A677E005108BE /* MovieListAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieListAPI.m; sourceTree = "<group>"; };
 		044529601B6832F900DEA4E5 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = AFNetworking/AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -146,6 +157,19 @@
 		044529701B6832F900DEA4E5 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		044529711B6832F900DEA4E5 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
 		044529721B6832F900DEA4E5 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
+		04508ED31B6D7BCB00028E10 /* MovieListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieListController.h; path = Controller/MovieListController.h; sourceTree = "<group>"; };
+		04508ED41B6D7BCB00028E10 /* MovieListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieListController.m; path = Controller/MovieListController.m; sourceTree = "<group>"; };
+		04508ED71B6DC69E00028E10 /* MovieItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieItem.h; path = Model/MovieItem.h; sourceTree = "<group>"; };
+		04508ED81B6DC69E00028E10 /* MovieItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieItem.m; path = Model/MovieItem.m; sourceTree = "<group>"; };
+		046E0FE41B76CEFD00F3B3FD /* MovieDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieDetailVC.h; path = Controller/MovieDetailVC.h; sourceTree = "<group>"; };
+		046E0FE51B76CEFD00F3B3FD /* MovieDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieDetailVC.m; path = Controller/MovieDetailVC.m; sourceTree = "<group>"; };
+		046E0FE61B76CEFD00F3B3FD /* MovieDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MovieDetailVC.xib; path = Controller/MovieDetailVC.xib; sourceTree = "<group>"; };
+		048464D01B74DB81002DAFEA /* MovieDetailItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieDetailItem.h; path = Model/MovieDetailItem.h; sourceTree = "<group>"; };
+		048464D11B74DB81002DAFEA /* MovieDetailItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieDetailItem.m; path = Model/MovieDetailItem.m; sourceTree = "<group>"; };
+		048464D31B74E8A1002DAFEA /* MovieDetailAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieDetailAPI.h; path = WebAPI/MovieDetailAPI.h; sourceTree = "<group>"; };
+		048464D41B74E8A1002DAFEA /* MovieDetailAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieDetailAPI.m; path = WebAPI/MovieDetailAPI.m; sourceTree = "<group>"; };
+		048938291B774F52007F4CDE /* DoubanMovieDetailReformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoubanMovieDetailReformer.h; path = Reformer/DoubanMovieDetailReformer.h; sourceTree = "<group>"; };
+		0489382A1B774F52007F4CDE /* DoubanMovieDetailReformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubanMovieDetailReformer.m; path = Reformer/DoubanMovieDetailReformer.m; sourceTree = "<group>"; };
 		04A5F9501B67B61C00BA6440 /* a1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = a1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A5F9541B67B61C00BA6440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04A5F9551B67B61C00BA6440 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -324,9 +348,23 @@
 			name = DoubanMovie;
 			sourceTree = "<group>";
 		};
+		0405EBC91B6CF155003D3EB1 /* Reformer */ = {
+			isa = PBXGroup;
+			children = (
+				0405EBCD1B6CF765003D3EB1 /* PropertyListKeys.h */,
+				0405EBCA1B6CF181003D3EB1 /* DoubanMovieReformer.h */,
+				0405EBCB1B6CF181003D3EB1 /* DoubanMovieReformer.m */,
+				048938291B774F52007F4CDE /* DoubanMovieDetailReformer.h */,
+				0489382A1B774F52007F4CDE /* DoubanMovieDetailReformer.m */,
+			);
+			name = Reformer;
+			sourceTree = "<group>";
+		};
 		043AA7CA1B6A6736005108BE /* WebAPI */ = {
 			isa = PBXGroup;
 			children = (
+				048464D31B74E8A1002DAFEA /* MovieDetailAPI.h */,
+				048464D41B74E8A1002DAFEA /* MovieDetailAPI.m */,
 				043AA7CB1B6A677E005108BE /* MovieListAPI.h */,
 				043AA7CC1B6A677E005108BE /* MovieListAPI.m */,
 			);
@@ -368,6 +406,29 @@
 			name = AFNetwork;
 			sourceTree = "<group>";
 		};
+		04508E951B6D799800028E10 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				046E0FE41B76CEFD00F3B3FD /* MovieDetailVC.h */,
+				046E0FE51B76CEFD00F3B3FD /* MovieDetailVC.m */,
+				046E0FE61B76CEFD00F3B3FD /* MovieDetailVC.xib */,
+				04508ED31B6D7BCB00028E10 /* MovieListController.h */,
+				04508ED41B6D7BCB00028E10 /* MovieListController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		04508ED61B6DC5F800028E10 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				048464D01B74DB81002DAFEA /* MovieDetailItem.h */,
+				048464D11B74DB81002DAFEA /* MovieDetailItem.m */,
+				04508ED71B6DC69E00028E10 /* MovieItem.h */,
+				04508ED81B6DC69E00028E10 /* MovieItem.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		04A5F9471B67B61C00BA6440 = {
 			isa = PBXGroup;
 			children = (
@@ -393,6 +454,9 @@
 		04A5F9521B67B61C00BA6440 /* a1 */ = {
 			isa = PBXGroup;
 			children = (
+				04508ED61B6DC5F800028E10 /* Model */,
+				04508E951B6D799800028E10 /* Controller */,
+				0405EBC91B6CF155003D3EB1 /* Reformer */,
 				043AA7CA1B6A6736005108BE /* WebAPI */,
 				0445295F1B6832D900DEA4E5 /* Vendor */,
 				04A5F9571B67B61C00BA6440 /* AppDelegate.h */,
@@ -515,6 +579,7 @@
 			files = (
 				04A5F95F1B67B61C00BA6440 /* Main.storyboard in Resources */,
 				04A5F9641B67B61C00BA6440 /* LaunchScreen.xib in Resources */,
+				046E0FE81B76CEFD00F3B3FD /* MovieDetailVC.xib in Resources */,
 				04A5F9611B67B61C00BA6440 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,6 +602,7 @@
 				0405EB961B6C6ADE003D3EB1 /* AIFService.m in Sources */,
 				04A5F95C1B67B61C00BA6440 /* ViewController.m in Sources */,
 				0405EBBA1B6C6B7A003D3EB1 /* AIFPListManager.m in Sources */,
+				046E0FE71B76CEFD00F3B3FD /* MovieDetailVC.m in Sources */,
 				0405EBAF1B6C6B30003D3EB1 /* AIFCachedObject.m in Sources */,
 				0405EB7F1B6C6A80003D3EB1 /* NSMutableString+AXNetworkingMethods.m in Sources */,
 				0405EBA31B6C6B12003D3EB1 /* AIFApiProxy.m in Sources */,
@@ -544,6 +610,7 @@
 				0405EB971B6C6ADE003D3EB1 /* AIFServiceFactory.m in Sources */,
 				0405EB8E1B6C6AAF003D3EB1 /* AIFRequestGenerator.m in Sources */,
 				0405EB7D1B6C6A80003D3EB1 /* NSArray+AXNetworkingMethods.m in Sources */,
+				04508ED91B6DC69E00028E10 /* MovieItem.m in Sources */,
 				0405EBAE1B6C6B30003D3EB1 /* AIFCache.m in Sources */,
 				0405EB831B6C6A80003D3EB1 /* UIDevice+IdentifierAddition.m in Sources */,
 				044529741B6832F900DEA4E5 /* AFHTTPRequestOperationManager.m in Sources */,
@@ -551,23 +618,28 @@
 				0445297A1B6832F900DEA4E5 /* AFURLResponseSerialization.m in Sources */,
 				0405EBA41B6C6B12003D3EB1 /* AIFAppContext.m in Sources */,
 				0405EBA81B6C6B1A003D3EB1 /* RTAPIBaseManager.m in Sources */,
+				0489382B1B774F52007F4CDE /* DoubanMovieDetailReformer.m in Sources */,
 				044529781B6832F900DEA4E5 /* AFURLConnectionOperation.m in Sources */,
 				0405EBA51B6C6B12003D3EB1 /* AIFURLResponse.m in Sources */,
 				043AA7CD1B6A677E005108BE /* MovieListAPI.m in Sources */,
 				0405EBC01B6C6BA5003D3EB1 /* AIFLogger.m in Sources */,
 				044529771B6832F900DEA4E5 /* AFSecurityPolicy.m in Sources */,
+				048464D51B74E8A1002DAFEA /* MovieDetailAPI.m in Sources */,
 				044529751B6832F900DEA4E5 /* AFHTTPSessionManager.m in Sources */,
 				044529791B6832F900DEA4E5 /* AFURLRequestSerialization.m in Sources */,
 				0405EB801B6C6A80003D3EB1 /* NSObject+AXNetworkingMethods.m in Sources */,
 				0405EBB61B6C6B5A003D3EB1 /* AIFLocationManager.m in Sources */,
 				0405EB9B1B6C6AF1003D3EB1 /* AIFServiceGoogleMapDirections.m in Sources */,
 				0405EBC81B6CD0CE003D3EB1 /* AIFServiceDoubanMovie.m in Sources */,
+				04508ED51B6D7BCB00028E10 /* MovieListController.m in Sources */,
 				0405EB811B6C6A80003D3EB1 /* NSString+AXNetworkingMethods.m in Sources */,
 				0405EB8F1B6C6AAF003D3EB1 /* AIFSignatureGenerator.m in Sources */,
 				0405EBB51B6C6B5A003D3EB1 /* AIFCityListManager.m in Sources */,
 				0405EBC11B6C6BA5003D3EB1 /* AIFLoggerConfiguration.m in Sources */,
 				0405EB901B6C6AAF003D3EB1 /* AIFUDIDGenerator.m in Sources */,
 				0405EB7E1B6C6A80003D3EB1 /* NSDictionary+AXNetworkingMethods.m in Sources */,
+				0405EBCC1B6CF181003D3EB1 /* DoubanMovieReformer.m in Sources */,
+				048464D21B74DB81002DAFEA /* MovieDetailItem.m in Sources */,
 				0445297B1B6832F900DEA4E5 /* AFURLSessionManager.m in Sources */,
 				04A5F9591B67B61C00BA6440 /* AppDelegate.m in Sources */,
 				04A5F9561B67B61C00BA6440 /* main.m in Sources */,

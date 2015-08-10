@@ -153,6 +153,18 @@
                         case RTAPIManagerRequestTypeRestPost:
                             AXCallAPI(RestfulPOST, requestId);
                             break;
+                        case RTAPIManagerRequestTypeGetWithURLFormat:
+                        {
+                            requestId = [[AIFApiProxy sharedInstance] callGETWithParamsAndURLFormatString:apiParams serviceIdentifier:self.child.serviceType methodName:self.child.methodName URLFormatString:@"%@%@/%@/%@" success:^(AIFURLResponse *response) {
+                                [self successedOnCallingAPI:response];
+                            } fail:^(AIFURLResponse *response) {
+                                [self failedOnCallingAPI:response withErrorType:RTAPIManagerErrorTypeDefault];
+                            }];
+                            
+                            [self.requestIdList addObject:@(requestId)];
+                             
+                            break;
+                        }
                         default:
                             break;
                     }
