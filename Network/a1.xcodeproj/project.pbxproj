@@ -50,6 +50,8 @@
 		0445297B1B6832F900DEA4E5 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 044529721B6832F900DEA4E5 /* AFURLSessionManager.m */; };
 		04508ED51B6D7BCB00028E10 /* MovieListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04508ED41B6D7BCB00028E10 /* MovieListController.m */; };
 		04508ED91B6DC69E00028E10 /* MovieItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04508ED81B6DC69E00028E10 /* MovieItem.m */; };
+		04595FEA1B7A2E3600EDE85E /* DoubanMovieReformerByJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04595FE91B7A2E3600EDE85E /* DoubanMovieReformerByJsonModel.m */; };
+		04595FED1B7A2F3A00EDE85E /* MovieItemByJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04595FEC1B7A2F3A00EDE85E /* MovieItemByJSONModel.m */; };
 		046E0FE71B76CEFD00F3B3FD /* MovieDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 046E0FE51B76CEFD00F3B3FD /* MovieDetailVC.m */; };
 		046E0FE81B76CEFD00F3B3FD /* MovieDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046E0FE61B76CEFD00F3B3FD /* MovieDetailVC.xib */; };
 		048464D21B74DB81002DAFEA /* MovieDetailItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 048464D11B74DB81002DAFEA /* MovieDetailItem.m */; };
@@ -171,6 +173,10 @@
 		04508ED41B6D7BCB00028E10 /* MovieListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieListController.m; path = Controller/MovieListController.m; sourceTree = "<group>"; };
 		04508ED71B6DC69E00028E10 /* MovieItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieItem.h; path = Model/MovieItem.h; sourceTree = "<group>"; };
 		04508ED81B6DC69E00028E10 /* MovieItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieItem.m; path = Model/MovieItem.m; sourceTree = "<group>"; };
+		04595FE81B7A2E3600EDE85E /* DoubanMovieReformerByJsonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoubanMovieReformerByJsonModel.h; path = Reformer/DoubanMovieReformerByJsonModel.h; sourceTree = "<group>"; };
+		04595FE91B7A2E3600EDE85E /* DoubanMovieReformerByJsonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubanMovieReformerByJsonModel.m; path = Reformer/DoubanMovieReformerByJsonModel.m; sourceTree = "<group>"; };
+		04595FEB1B7A2F3A00EDE85E /* MovieItemByJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieItemByJSONModel.h; path = Model/MovieItemByJSONModel.h; sourceTree = "<group>"; };
+		04595FEC1B7A2F3A00EDE85E /* MovieItemByJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieItemByJSONModel.m; path = Model/MovieItemByJSONModel.m; sourceTree = "<group>"; };
 		046E0FE41B76CEFD00F3B3FD /* MovieDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieDetailVC.h; path = Controller/MovieDetailVC.h; sourceTree = "<group>"; };
 		046E0FE51B76CEFD00F3B3FD /* MovieDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieDetailVC.m; path = Controller/MovieDetailVC.m; sourceTree = "<group>"; };
 		046E0FE61B76CEFD00F3B3FD /* MovieDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MovieDetailVC.xib; path = Controller/MovieDetailVC.xib; sourceTree = "<group>"; };
@@ -383,6 +389,8 @@
 			isa = PBXGroup;
 			children = (
 				0405EBCD1B6CF765003D3EB1 /* PropertyListKeys.h */,
+				04595FE81B7A2E3600EDE85E /* DoubanMovieReformerByJsonModel.h */,
+				04595FE91B7A2E3600EDE85E /* DoubanMovieReformerByJsonModel.m */,
 				0405EBCA1B6CF181003D3EB1 /* DoubanMovieReformer.h */,
 				0405EBCB1B6CF181003D3EB1 /* DoubanMovieReformer.m */,
 				048938291B774F52007F4CDE /* DoubanMovieDetailReformer.h */,
@@ -457,6 +465,8 @@
 				048464D11B74DB81002DAFEA /* MovieDetailItem.m */,
 				04508ED71B6DC69E00028E10 /* MovieItem.h */,
 				04508ED81B6DC69E00028E10 /* MovieItem.m */,
+				04595FEB1B7A2F3A00EDE85E /* MovieItemByJSONModel.h */,
+				04595FEC1B7A2F3A00EDE85E /* MovieItemByJSONModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -691,6 +701,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				044529731B6832F900DEA4E5 /* AFHTTPRequestOperation.m in Sources */,
+				04595FEA1B7A2E3600EDE85E /* DoubanMovieReformerByJsonModel.m in Sources */,
 				0405EB961B6C6ADE003D3EB1 /* AIFService.m in Sources */,
 				04A5F95C1B67B61C00BA6440 /* ViewController.m in Sources */,
 				0405EBBA1B6C6B7A003D3EB1 /* AIFPListManager.m in Sources */,
@@ -723,6 +734,7 @@
 				048464D51B74E8A1002DAFEA /* MovieDetailAPI.m in Sources */,
 				04C1C5101B78E868007DE395 /* JSONModelClassProperty.m in Sources */,
 				044529751B6832F900DEA4E5 /* AFHTTPSessionManager.m in Sources */,
+				04595FED1B7A2F3A00EDE85E /* MovieItemByJSONModel.m in Sources */,
 				044529791B6832F900DEA4E5 /* AFURLRequestSerialization.m in Sources */,
 				0405EB801B6C6A80003D3EB1 /* NSObject+AXNetworkingMethods.m in Sources */,
 				0405EBB61B6C6B5A003D3EB1 /* AIFLocationManager.m in Sources */,

@@ -10,10 +10,13 @@
 #import "../WebAPI/MovieDetailAPI.h"
 #import "DoubanMovieDetailReformer.h"
 
+#import "DoubanMovieReformerByJsonModel.h"
+
 @interface MovieDetailVC ()<RTAPIManagerApiCallBackDelegate,RTAPIManagerValidator,RTAPIManagerParamSourceDelegate>
 @property (nonatomic,strong) MovieDetailAPI *movieDetailWebAPI;
 @property (nonatomic, strong) NSMutableArray *movieListSource;
 @property (nonatomic,strong) id<RTAPIManagerCallbackDataReformer> movieDetailReformer;
+@property (nonatomic,strong) id<RTAPIManagerCallbackDataReformer> movieReformerByJsonModel;
 @end
 
 @implementation MovieDetailVC
@@ -39,8 +42,15 @@
 - (void)managerCallAPIDidSuccess:(RTAPIBaseManager *)manager
 {
     NSLog(@"Successfully");
+    //返回 原始数据。 NSDictionary 格式
     //NSDictionary *data = [manager fetchDataWithReformer:nil];
-    NSArray *data = [manager fetchDataWithReformer:self.movieDetailReformer];
+    
+    //返回 转换后格式，转换后的格式，由movieDetailReformer转换器决定
+    //NSArray *data = [manager fetchDataWithReformer:self.movieDetailReformer];
+    
+    NSArray *data = [manager fetchDataWithReformer:self.movieReformerByJsonModel];
+    
+    
     NSLog(@"%@",data);
 
     //[self.movieListSource addObjectsFromArray:data];
@@ -107,6 +117,14 @@
         _movieDetailReformer = [[DoubanMovieDetailReformer alloc] init];
     }
     return _movieDetailReformer;
+}
+
+-(id<RTAPIManagerCallbackDataReformer>)movieReformerByJsonModel
+{
+    if (_movieReformerByJsonModel == nil) {
+        _movieReformerByJsonModel = [[DoubanMovieReformerByJsonModel alloc] init];
+    }
+    return _movieReformerByJsonModel;
 }
 
 @end
