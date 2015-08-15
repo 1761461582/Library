@@ -57,6 +57,18 @@
 		048464D21B74DB81002DAFEA /* MovieDetailItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 048464D11B74DB81002DAFEA /* MovieDetailItem.m */; };
 		048464D51B74E8A1002DAFEA /* MovieDetailAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 048464D41B74E8A1002DAFEA /* MovieDetailAPI.m */; };
 		0489382B1B774F52007F4CDE /* DoubanMovieDetailReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0489382A1B774F52007F4CDE /* DoubanMovieDetailReformer.m */; };
+		04915FB91B7E25D70013AD7E /* DoubanMovieDetailReformerByJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04915FB81B7E25D70013AD7E /* DoubanMovieDetailReformerByJSONModel.m */; };
+		04A1E2371B7F16B700335478 /* MovieSearchWebAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1E2361B7F16B700335478 /* MovieSearchWebAPI.m */; };
+		04A1E23A1B7F5BD700335478 /* MovieSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1E2391B7F5BD700335478 /* MovieSearchVC.m */; };
+		04A1E24D1B7F6B2200335478 /* MovieSearchResultByJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1E2401B7F6B2200335478 /* MovieSearchResultByJSONModel.m */; };
+		04A1E24E1B7F6B2200335478 /* Subjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1E2421B7F6B2200335478 /* Subjects.m */; };
+		04A1E24F1B7F6B2200335478 /* Avatars.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1E2441B7F6B2200335478 /* Avatars.m */; };
+		04A1E2501B7F6B2200335478 /* Casts.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1E2461B7F6B2200335478 /* Casts.m */; };
+		04A1E2511B7F6B2200335478 /* Directors.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1E2481B7F6B2200335478 /* Directors.m */; };
+		04A1E2521B7F6B2200335478 /* Images.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1E24A1B7F6B2200335478 /* Images.m */; };
+		04A1E2531B7F6B2200335478 /* Rating.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1E24C1B7F6B2200335478 /* Rating.m */; };
+		04A1E2591B7F713F00335478 /* DoubanMovieSearchResultByJSONModelReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1E2581B7F713F00335478 /* DoubanMovieSearchResultByJSONModelReformer.m */; };
+		04A1E25C1B7F7DFA00335478 /* MovieDetailByJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1E25B1B7F7DFA00335478 /* MovieDetailByJSONModel.m */; };
 		04A5F9561B67B61C00BA6440 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5F9551B67B61C00BA6440 /* main.m */; };
 		04A5F9591B67B61C00BA6440 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5F9581B67B61C00BA6440 /* AppDelegate.m */; };
 		04A5F95C1B67B61C00BA6440 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5F95B1B67B61C00BA6440 /* ViewController.m */; };
@@ -186,6 +198,30 @@
 		048464D41B74E8A1002DAFEA /* MovieDetailAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieDetailAPI.m; path = WebAPI/MovieDetailAPI.m; sourceTree = "<group>"; };
 		048938291B774F52007F4CDE /* DoubanMovieDetailReformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoubanMovieDetailReformer.h; path = Reformer/DoubanMovieDetailReformer.h; sourceTree = "<group>"; };
 		0489382A1B774F52007F4CDE /* DoubanMovieDetailReformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubanMovieDetailReformer.m; path = Reformer/DoubanMovieDetailReformer.m; sourceTree = "<group>"; };
+		04915FB71B7E25D70013AD7E /* DoubanMovieDetailReformerByJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoubanMovieDetailReformerByJSONModel.h; path = Reformer/DoubanMovieDetailReformerByJSONModel.h; sourceTree = "<group>"; };
+		04915FB81B7E25D70013AD7E /* DoubanMovieDetailReformerByJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubanMovieDetailReformerByJSONModel.m; path = Reformer/DoubanMovieDetailReformerByJSONModel.m; sourceTree = "<group>"; };
+		04A1E2351B7F16B700335478 /* MovieSearchWebAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieSearchWebAPI.h; path = WebAPI/MovieSearchWebAPI.h; sourceTree = "<group>"; };
+		04A1E2361B7F16B700335478 /* MovieSearchWebAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieSearchWebAPI.m; path = WebAPI/MovieSearchWebAPI.m; sourceTree = "<group>"; };
+		04A1E2381B7F5BD700335478 /* MovieSearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieSearchVC.h; path = Controller/MovieSearchVC.h; sourceTree = "<group>"; };
+		04A1E2391B7F5BD700335478 /* MovieSearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieSearchVC.m; path = Controller/MovieSearchVC.m; sourceTree = "<group>"; };
+		04A1E23F1B7F6B2200335478 /* MovieSearchResultByJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieSearchResultByJSONModel.h; path = Model/MovieSearchResultByJSONModel.h; sourceTree = "<group>"; };
+		04A1E2401B7F6B2200335478 /* MovieSearchResultByJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieSearchResultByJSONModel.m; path = Model/MovieSearchResultByJSONModel.m; sourceTree = "<group>"; };
+		04A1E2411B7F6B2200335478 /* Subjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Subjects.h; path = Model/Subjects.h; sourceTree = "<group>"; };
+		04A1E2421B7F6B2200335478 /* Subjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Subjects.m; path = Model/Subjects.m; sourceTree = "<group>"; };
+		04A1E2431B7F6B2200335478 /* Avatars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Avatars.h; path = Model/Avatars.h; sourceTree = "<group>"; };
+		04A1E2441B7F6B2200335478 /* Avatars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Avatars.m; path = Model/Avatars.m; sourceTree = "<group>"; };
+		04A1E2451B7F6B2200335478 /* Casts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Casts.h; path = Model/Casts.h; sourceTree = "<group>"; };
+		04A1E2461B7F6B2200335478 /* Casts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Casts.m; path = Model/Casts.m; sourceTree = "<group>"; };
+		04A1E2471B7F6B2200335478 /* Directors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Directors.h; path = Model/Directors.h; sourceTree = "<group>"; };
+		04A1E2481B7F6B2200335478 /* Directors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Directors.m; path = Model/Directors.m; sourceTree = "<group>"; };
+		04A1E2491B7F6B2200335478 /* Images.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Images.h; path = Model/Images.h; sourceTree = "<group>"; };
+		04A1E24A1B7F6B2200335478 /* Images.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Images.m; path = Model/Images.m; sourceTree = "<group>"; };
+		04A1E24B1B7F6B2200335478 /* Rating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rating.h; path = Model/Rating.h; sourceTree = "<group>"; };
+		04A1E24C1B7F6B2200335478 /* Rating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Rating.m; path = Model/Rating.m; sourceTree = "<group>"; };
+		04A1E2571B7F713F00335478 /* DoubanMovieSearchResultByJSONModelReformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoubanMovieSearchResultByJSONModelReformer.h; path = Reformer/DoubanMovieSearchResultByJSONModelReformer.h; sourceTree = "<group>"; };
+		04A1E2581B7F713F00335478 /* DoubanMovieSearchResultByJSONModelReformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubanMovieSearchResultByJSONModelReformer.m; path = Reformer/DoubanMovieSearchResultByJSONModelReformer.m; sourceTree = "<group>"; };
+		04A1E25A1B7F7DFA00335478 /* MovieDetailByJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieDetailByJSONModel.h; path = Model/MovieDetailByJSONModel.h; sourceTree = "<group>"; };
+		04A1E25B1B7F7DFA00335478 /* MovieDetailByJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieDetailByJSONModel.m; path = Model/MovieDetailByJSONModel.m; sourceTree = "<group>"; };
 		04A5F9501B67B61C00BA6440 /* a1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = a1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A5F9541B67B61C00BA6440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04A5F9551B67B61C00BA6440 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -389,12 +425,16 @@
 			isa = PBXGroup;
 			children = (
 				0405EBCD1B6CF765003D3EB1 /* PropertyListKeys.h */,
+				04915FB71B7E25D70013AD7E /* DoubanMovieDetailReformerByJSONModel.h */,
+				04915FB81B7E25D70013AD7E /* DoubanMovieDetailReformerByJSONModel.m */,
 				04595FE81B7A2E3600EDE85E /* DoubanMovieReformerByJsonModel.h */,
 				04595FE91B7A2E3600EDE85E /* DoubanMovieReformerByJsonModel.m */,
 				0405EBCA1B6CF181003D3EB1 /* DoubanMovieReformer.h */,
 				0405EBCB1B6CF181003D3EB1 /* DoubanMovieReformer.m */,
 				048938291B774F52007F4CDE /* DoubanMovieDetailReformer.h */,
 				0489382A1B774F52007F4CDE /* DoubanMovieDetailReformer.m */,
+				04A1E2571B7F713F00335478 /* DoubanMovieSearchResultByJSONModelReformer.h */,
+				04A1E2581B7F713F00335478 /* DoubanMovieSearchResultByJSONModelReformer.m */,
 			);
 			name = Reformer;
 			sourceTree = "<group>";
@@ -404,6 +444,8 @@
 			children = (
 				048464D31B74E8A1002DAFEA /* MovieDetailAPI.h */,
 				048464D41B74E8A1002DAFEA /* MovieDetailAPI.m */,
+				04A1E2351B7F16B700335478 /* MovieSearchWebAPI.h */,
+				04A1E2361B7F16B700335478 /* MovieSearchWebAPI.m */,
 				043AA7CB1B6A677E005108BE /* MovieListAPI.h */,
 				043AA7CC1B6A677E005108BE /* MovieListAPI.m */,
 			);
@@ -454,6 +496,8 @@
 				046E0FE61B76CEFD00F3B3FD /* MovieDetailVC.xib */,
 				04508ED31B6D7BCB00028E10 /* MovieListController.h */,
 				04508ED41B6D7BCB00028E10 /* MovieListController.m */,
+				04A1E2381B7F5BD700335478 /* MovieSearchVC.h */,
+				04A1E2391B7F5BD700335478 /* MovieSearchVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -461,6 +505,7 @@
 		04508ED61B6DC5F800028E10 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04A1E23E1B7F6B0A00335478 /* JSONModel */,
 				048464D01B74DB81002DAFEA /* MovieDetailItem.h */,
 				048464D11B74DB81002DAFEA /* MovieDetailItem.m */,
 				04508ED71B6DC69E00028E10 /* MovieItem.h */,
@@ -469,6 +514,29 @@
 				04595FEC1B7A2F3A00EDE85E /* MovieItemByJSONModel.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		04A1E23E1B7F6B0A00335478 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				04A1E23F1B7F6B2200335478 /* MovieSearchResultByJSONModel.h */,
+				04A1E2401B7F6B2200335478 /* MovieSearchResultByJSONModel.m */,
+				04A1E2411B7F6B2200335478 /* Subjects.h */,
+				04A1E2421B7F6B2200335478 /* Subjects.m */,
+				04A1E2431B7F6B2200335478 /* Avatars.h */,
+				04A1E2441B7F6B2200335478 /* Avatars.m */,
+				04A1E2451B7F6B2200335478 /* Casts.h */,
+				04A1E2461B7F6B2200335478 /* Casts.m */,
+				04A1E2471B7F6B2200335478 /* Directors.h */,
+				04A1E2481B7F6B2200335478 /* Directors.m */,
+				04A1E2491B7F6B2200335478 /* Images.h */,
+				04A1E24A1B7F6B2200335478 /* Images.m */,
+				04A1E24B1B7F6B2200335478 /* Rating.h */,
+				04A1E24C1B7F6B2200335478 /* Rating.m */,
+				04A1E25A1B7F7DFA00335478 /* MovieDetailByJSONModel.h */,
+				04A1E25B1B7F7DFA00335478 /* MovieDetailByJSONModel.m */,
+			);
+			name = JSONModel;
 			sourceTree = "<group>";
 		};
 		04A5F9471B67B61C00BA6440 = {
@@ -704,6 +772,7 @@
 				04595FEA1B7A2E3600EDE85E /* DoubanMovieReformerByJsonModel.m in Sources */,
 				0405EB961B6C6ADE003D3EB1 /* AIFService.m in Sources */,
 				04A5F95C1B67B61C00BA6440 /* ViewController.m in Sources */,
+				04A1E24E1B7F6B2200335478 /* Subjects.m in Sources */,
 				0405EBBA1B6C6B7A003D3EB1 /* AIFPListManager.m in Sources */,
 				04C1C5251B78E8C4007DE395 /* JSONKeyMapper.m in Sources */,
 				046E0FE71B76CEFD00F3B3FD /* MovieDetailVC.m in Sources */,
@@ -720,15 +789,19 @@
 				0405EB831B6C6A80003D3EB1 /* UIDevice+IdentifierAddition.m in Sources */,
 				044529741B6832F900DEA4E5 /* AFHTTPRequestOperationManager.m in Sources */,
 				044529761B6832F900DEA4E5 /* AFNetworkReachabilityManager.m in Sources */,
+				04915FB91B7E25D70013AD7E /* DoubanMovieDetailReformerByJSONModel.m in Sources */,
 				0445297A1B6832F900DEA4E5 /* AFURLResponseSerialization.m in Sources */,
 				0405EBA41B6C6B12003D3EB1 /* AIFAppContext.m in Sources */,
+				04A1E2531B7F6B2200335478 /* Rating.m in Sources */,
 				0405EBA81B6C6B1A003D3EB1 /* RTAPIBaseManager.m in Sources */,
 				04C1C51D1B78E8A9007DE395 /* JSONAPI.m in Sources */,
 				0489382B1B774F52007F4CDE /* DoubanMovieDetailReformer.m in Sources */,
 				04C1C50F1B78E868007DE395 /* JSONModelArray.m in Sources */,
+				04A1E2591B7F713F00335478 /* DoubanMovieSearchResultByJSONModelReformer.m in Sources */,
 				044529781B6832F900DEA4E5 /* AFURLConnectionOperation.m in Sources */,
 				0405EBA51B6C6B12003D3EB1 /* AIFURLResponse.m in Sources */,
 				043AA7CD1B6A677E005108BE /* MovieListAPI.m in Sources */,
+				04A1E23A1B7F5BD700335478 /* MovieSearchVC.m in Sources */,
 				0405EBC01B6C6BA5003D3EB1 /* AIFLogger.m in Sources */,
 				044529771B6832F900DEA4E5 /* AFSecurityPolicy.m in Sources */,
 				048464D51B74E8A1002DAFEA /* MovieDetailAPI.m in Sources */,
@@ -739,6 +812,7 @@
 				0405EB801B6C6A80003D3EB1 /* NSObject+AXNetworkingMethods.m in Sources */,
 				0405EBB61B6C6B5A003D3EB1 /* AIFLocationManager.m in Sources */,
 				04C1C50E1B78E868007DE395 /* JSONModel.m in Sources */,
+				04A1E25C1B7F7DFA00335478 /* MovieDetailByJSONModel.m in Sources */,
 				04C1C5151B78E888007DE395 /* NSArray+JSONModel.m in Sources */,
 				0405EB9B1B6C6AF1003D3EB1 /* AIFServiceGoogleMapDirections.m in Sources */,
 				0405EBC81B6CD0CE003D3EB1 /* AIFServiceDoubanMovie.m in Sources */,
@@ -746,17 +820,23 @@
 				0405EB811B6C6A80003D3EB1 /* NSString+AXNetworkingMethods.m in Sources */,
 				04C1C5111B78E868007DE395 /* JSONModelError.m in Sources */,
 				0405EB8F1B6C6AAF003D3EB1 /* AIFSignatureGenerator.m in Sources */,
+				04A1E2501B7F6B2200335478 /* Casts.m in Sources */,
+				04A1E24D1B7F6B2200335478 /* MovieSearchResultByJSONModel.m in Sources */,
 				0405EBB51B6C6B5A003D3EB1 /* AIFCityListManager.m in Sources */,
 				0405EBC11B6C6BA5003D3EB1 /* AIFLoggerConfiguration.m in Sources */,
 				04C1C51E1B78E8A9007DE395 /* JSONHTTPClient.m in Sources */,
 				0405EB901B6C6AAF003D3EB1 /* AIFUDIDGenerator.m in Sources */,
+				04A1E24F1B7F6B2200335478 /* Avatars.m in Sources */,
 				0405EB7E1B6C6A80003D3EB1 /* NSDictionary+AXNetworkingMethods.m in Sources */,
 				0405EBCC1B6CF181003D3EB1 /* DoubanMovieReformer.m in Sources */,
 				048464D21B74DB81002DAFEA /* MovieDetailItem.m in Sources */,
 				04C1C51F1B78E8A9007DE395 /* JSONModel+networking.m in Sources */,
 				0445297B1B6832F900DEA4E5 /* AFURLSessionManager.m in Sources */,
+				04A1E2371B7F16B700335478 /* MovieSearchWebAPI.m in Sources */,
 				04A5F9591B67B61C00BA6440 /* AppDelegate.m in Sources */,
+				04A1E2511B7F6B2200335478 /* Directors.m in Sources */,
 				04A5F9561B67B61C00BA6440 /* main.m in Sources */,
+				04A1E2521B7F6B2200335478 /* Images.m in Sources */,
 				0405EB821B6C6A80003D3EB1 /* NSURLRequest+AIFNetworkingMethods.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

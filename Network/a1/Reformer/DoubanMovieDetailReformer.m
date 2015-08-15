@@ -33,7 +33,7 @@
         NSDictionary *rateDic = [data objectForKey:@"rating"];
         it.ratingString = [NSString stringWithFormat:@"%.1f", [[rateDic objectForKey:@"average"] floatValue]];
         NSArray *genres = [data objectForKey:@"genres"];
-        it.genres = [NSString stringWithFormat:@"%@,%@",[genres objectAtIndex:0],[genres objectAtIndex:1]];
+        it.genres = [NSString stringWithFormat:@"%@",[genres objectAtIndex:0]];
         
         NSArray *array = [data objectForKey:@"directors"];
         NSDictionary *directorinfo = [array objectAtIndex:0];

@@ -11,6 +11,7 @@
 #import "DoubanMovieReformer.h"
 
 #import "MovieListController.h"
+#import "MovieSearchVC.h"
 
 
 @interface ViewController ()<RTAPIManagerApiCallBackDelegate,RTAPIManagerValidator,RTAPIManagerParamSourceDelegate>
@@ -33,6 +34,10 @@
 - (IBAction)getMovieList:(id)sender {
     //[self.movieListWebAPI loadData];
     MovieListController *vc = [[MovieListController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (IBAction)SearchMovie:(id)sender {
+    MovieSearchVC *vc = [[MovieSearchVC alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

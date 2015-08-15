@@ -8,15 +8,16 @@
 
 #import "MovieDetailVC.h"
 #import "../WebAPI/MovieDetailAPI.h"
-#import "DoubanMovieDetailReformer.h"
-
+//#import "DoubanMovieDetailReformer.h"
+#import "DoubanMovieDetailReformerByJSONModel.h"
 #import "DoubanMovieReformerByJsonModel.h"
+
 
 @interface MovieDetailVC ()<RTAPIManagerApiCallBackDelegate,RTAPIManagerValidator,RTAPIManagerParamSourceDelegate>
 @property (nonatomic,strong) MovieDetailAPI *movieDetailWebAPI;
-@property (nonatomic, strong) NSMutableArray *movieListSource;
-@property (nonatomic,strong) id<RTAPIManagerCallbackDataReformer> movieDetailReformer;
-@property (nonatomic,strong) id<RTAPIManagerCallbackDataReformer> movieReformerByJsonModel;
+//@property (nonatomic,strong) id<RTAPIManagerCallbackDataReformer> movieDetailReformer;
+@property (nonatomic,strong) id<RTAPIManagerCallbackDataReformer> movieDetailReformerByJsonModel;
+
 @end
 
 @implementation MovieDetailVC
@@ -48,14 +49,9 @@
     //返回 转换后格式，转换后的格式，由movieDetailReformer转换器决定
     //NSArray *data = [manager fetchDataWithReformer:self.movieDetailReformer];
     
-    NSArray *data = [manager fetchDataWithReformer:self.movieReformerByJsonModel];
-    
+    NSArray *data = [manager fetchDataWithReformer:self.movieDetailReformerByJsonModel];
     
     NSLog(@"%@",data);
-
-    //[self.movieListSource addObjectsFromArray:data];
-    //self.movieListSource = data;
-    //[self.tableView reloadData];
 }
 
 
@@ -111,6 +107,7 @@
     return _movieDetailWebAPI;
 }
 
+/*
 -(id<RTAPIManagerCallbackDataReformer>)movieDetailReformer
 {
     if (_movieDetailReformer == nil) {
@@ -118,13 +115,15 @@
     }
     return _movieDetailReformer;
 }
+*/
 
--(id<RTAPIManagerCallbackDataReformer>)movieReformerByJsonModel
+-(id<RTAPIManagerCallbackDataReformer>)movieDetailReformerByJsonModel
 {
-    if (_movieReformerByJsonModel == nil) {
-        _movieReformerByJsonModel = [[DoubanMovieReformerByJsonModel alloc] init];
+    if (_movieDetailReformerByJsonModel == nil) {
+        _movieDetailReformerByJsonModel = [[DoubanMovieDetailReformerByJSONModel alloc] init];
     }
-    return _movieReformerByJsonModel;
+    return _movieDetailReformerByJsonModel;
 }
+
 
 @end

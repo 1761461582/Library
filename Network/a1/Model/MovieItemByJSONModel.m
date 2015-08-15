@@ -11,6 +11,7 @@
 @implementation MovieItemByJSONModel
 +(JSONKeyMapper*)keyMapper
 {
+    //左边一列代表JSON文件的结构，右边一列代表数据结构
     return [[JSONKeyMapper alloc] initWithDictionary:@{
                                                        @"id": @"ID",
                                                        @"title": @"title",
@@ -24,4 +25,5 @@
                                                        @"rating.average": @"ratingString"
                                                        }];
 }
+
 @end

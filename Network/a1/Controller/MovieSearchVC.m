@@ -1,26 +1,24 @@
 //
-//  MovieListController.m
+//  MovieSearchVC.m
 //  a1
 //
-//  Created by hy on 15/8/2.
+//  Created by hy on 15/8/15.
 //  Copyright (c) 2015年 com.yuanchuanglian. All rights reserved.
 //
 
-#import "MovieListController.h"
-#import "MovieListAPI.h"
-#import "DoubanMovieReformer.h"
-#import "MovieItem.h"
+#import "MovieSearchVC.h"
+#import "MovieSearchWebAPI.h"
+#import "DoubanMovieSearchResultByJSONModelReformer.h"
+#import "Subjects.h"
 #import "MovieDetailVC.h"
 
-@interface MovieListController ()<RTAPIManagerApiCallBackDelegate,RTAPIManagerValidator,RTAPIManagerParamSourceDelegate>
-@property (nonatomic,strong) MovieListAPI *movieListWebAPI;
-@property (nonatomic,strong) id<RTAPIManagerCallbackDataReformer> movieReformer;
-@property (nonatomic, strong) NSMutableArray *movieListSource;
-@property (nonatomic, strong) UIRefreshControl* refreshController;
-
+@interface MovieSearchVC ()<RTAPIManagerApiCallBackDelegate,RTAPIManagerValidator,RTAPIManagerParamSourceDelegate>
+@property (nonatomic,strong) MovieSearchWebAPI *movieSearchWebAPI;
+@property (nonatomic, strong) NSMutableArray *movieSearchResultSource;
+@property (nonatomic,strong) id<RTAPIManagerCallbackDataReformer> movieSearchResultReformer;
 @end
 
-@implementation MovieListController
+@implementation MovieSearchVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,10 +28,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self.refreshController addTarget:self action:@selector(refreshFeed) forControlEvents:UIControlEventValueChanged];
-    [self.tableView addSubview:self.refreshController];
     
-    [self requestMovies];
+    [self requestSearchMovies];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,10 +42,11 @@
 {
     NSLog(@"Successfully");
     //NSDictionary *data = [manager fetchDataWithReformer:nil];
-    NSArray *data = [manager fetchDataWithReformer:self.movieReformer];
 
-    [self.movieListSource addObjectsFromArray:data];
-    //self.movieListSource = data;
+    NSArray *data = [manager fetchDataWithReformer:self.movieSearchResultReformer];
+    
+    [self.movieSearchResultSource addObjectsFromArray:data];
+
     [self.tableView reloadData];
 }
 
@@ -75,8 +72,8 @@
 {
     NSDictionary *param = nil;
     
-    if ([manager isKindOfClass:[MovieListAPI class]]) {
-        param =   @{@"start":@"3",
+    if ([manager isKindOfClass:[MovieSearchWebAPI class]]) {
+        param =   @{@"q":@"汤唯",
                     @"count":@"10"};
     }
     
@@ -84,31 +81,9 @@
 }
 
 
-
--(MovieListAPI*)movieListWebAPI
-{
-    if (_movieListWebAPI == nil) {
-        _movieListWebAPI = [[MovieListAPI alloc] init];
-        _movieListWebAPI.delegate = self;
-        _movieListWebAPI.validator = self;
-        _movieListWebAPI.paramSource = self;
-    }
-    return _movieListWebAPI;
-}
-
--(id<RTAPIManagerCallbackDataReformer>)movieReformer
-{
-    if (_movieReformer == nil) {
-        _movieReformer = [[DoubanMovieReformer alloc] init];
-    }
-    return _movieReformer;
-}
-
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
     // Return the number of sections.
     return 1;
 }
@@ -116,21 +91,22 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     // Return the number of rows in the section.
-    return [self.movieListSource count];
+    return [self.movieSearchResultSource count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-        static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"SEARCHCELL";
     
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc]
-                    initWithStyle:UITableViewCellStyleSubtitle
-                    reuseIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]
+                initWithStyle:UITableViewCellStyleSubtitle
+                reuseIdentifier:CellIdentifier];
     }
+    
     // Configure the cell...
-    MovieItem *it = [self.movieListSource objectAtIndex:[indexPath row]];
+    Subjects *it = [self.movieSearchResultSource objectAtIndex:[indexPath row]];
     cell.textLabel.text = it.title;
     cell.detailTextLabel.text = it.original_title;
     return cell;
@@ -141,8 +117,8 @@
 {
     MovieDetailVC *vc = [[MovieDetailVC alloc] init];
     
-    MovieItem *it = [self.movieListSource objectAtIndex:[indexPath row]];
-    [vc setMovieID:it.ID];
+    Subjects *it = [self.movieSearchResultSource objectAtIndex:[indexPath row]];
+    [vc setMovieID:it.id];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -190,32 +166,39 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-- (void)refreshFeed
+#pragma private
+- (void)requestSearchMovies
 {
-    [self requestMovies];
+    [self.movieSearchWebAPI loadData];
 }
 
-- (void)requestMovies
-{
-    [self.movieListWebAPI loadData];
-}
 
-- (NSMutableArray*)movieListSource
+#pragma getter
+-(MovieSearchWebAPI*)movieSearchWebAPI
 {
-    if (_movieListSource == nil) {
-        _movieListSource = [[NSMutableArray alloc] init];
+    if (_movieSearchWebAPI == nil) {
+        _movieSearchWebAPI = [[MovieSearchWebAPI alloc] init];
+        _movieSearchWebAPI.delegate = self;
+        _movieSearchWebAPI.validator = self;
+        _movieSearchWebAPI.paramSource = self;
     }
-    return _movieListSource;
+    return _movieSearchWebAPI;
 }
 
-- (UIRefreshControl*)refreshControl
+- (NSMutableArray*)movieSearchResultSource
 {
-    if (_refreshController == nil) {
-        _refreshController = [[UIRefreshControl alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
-        
+    if (_movieSearchResultSource == nil) {
+        _movieSearchResultSource = [[NSMutableArray alloc] init];
     }
-    return _refreshController;
+    return _movieSearchResultSource;
+}
+
+-(id<RTAPIManagerCallbackDataReformer>)movieSearchResultReformer
+{
+    if (_movieSearchResultReformer == nil) {
+        _movieSearchResultReformer = [[DoubanMovieSearchResultByJSONModelReformer alloc] init];
+    }
+    return _movieSearchResultReformer;
 }
 
 @end

@@ -17,12 +17,21 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abI-WM-taD">
-                                <rect key="frame" x="46" y="58" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="44" y="95" width="84" height="30"/>
+                                <state key="normal" title="Top">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="getMovieList:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="B7b-Si-daI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCS-IX-8RW">
+                                <rect key="frame" x="49" y="141" width="74" height="30"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SearchMovie:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ktq-o9-WUP"/>
                                 </connections>
                             </button>
                         </subviews>
