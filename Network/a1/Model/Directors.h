@@ -13,11 +13,11 @@
 @protocol Directors @end
 @interface Directors : JSONModel
 
-@property (nonatomic, copy) NSString *id;
+@property (nonatomic, copy) NSString<Optional> *id;
 
-@property (nonatomic, copy) NSString *alt;
+@property (nonatomic, copy) NSString<Optional> *alt;
 
-@property (nonatomic, strong) Avatars *avatars;
+@property (nonatomic, strong) Avatars<Optional> *avatars;//114+1
 
 @property (nonatomic, copy) NSString *name;
 

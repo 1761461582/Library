@@ -8,9 +8,12 @@
 
 #import "MovieListController.h"
 #import "MovieListAPI.h"
-#import "DoubanMovieReformer.h"
-#import "MovieItem.h"
+//#import "DoubanMovieReformer.h"
+#import "DoubanTopMovieItemByJSONModelReformer.h"
+//#import "MovieItem.h"
+#import "Subjects.h"
 #import "MovieDetailVC.h"
+#import "UIImageView+WebCache.h"
 
 @interface MovieListController ()<RTAPIManagerApiCallBackDelegate,RTAPIManagerValidator,RTAPIManagerParamSourceDelegate>
 @property (nonatomic,strong) MovieListAPI *movieListWebAPI;
@@ -76,8 +79,8 @@
     NSDictionary *param = nil;
     
     if ([manager isKindOfClass:[MovieListAPI class]]) {
-        param =   @{@"start":@"3",
-                    @"count":@"10"};
+        param =   @{@"start":@"0",
+                    @"count":@"250"};
     }
     
     return param;
@@ -99,7 +102,7 @@
 -(id<RTAPIManagerCallbackDataReformer>)movieReformer
 {
     if (_movieReformer == nil) {
-        _movieReformer = [[DoubanMovieReformer alloc] init];
+        _movieReformer = [[DoubanTopMovieItemByJSONModelReformer alloc] init];
     }
     return _movieReformer;
 }
@@ -126,13 +129,19 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) {
             cell = [[UITableViewCell alloc]
-                    initWithStyle:UITableViewCellStyleSubtitle
+                    initWithStyle:/*UITableViewCellStyleSubtitle*/UITableViewCellStyleDefault
                     reuseIdentifier:CellIdentifier];
     }
     // Configure the cell...
+    /*
     MovieItem *it = [self.movieListSource objectAtIndex:[indexPath row]];
     cell.textLabel.text = it.title;
     cell.detailTextLabel.text = it.original_title;
+     */
+    Subjects *it = [self.movieListSource objectAtIndex:[indexPath row]];
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:it.images.small] placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    cell.textLabel.text = it.title;
+    //cell.detailTextLabel.text = it.original_title;
     return cell;
 }
 
@@ -140,9 +149,13 @@
 
 {
     MovieDetailVC *vc = [[MovieDetailVC alloc] init];
-    
+    /*
     MovieItem *it = [self.movieListSource objectAtIndex:[indexPath row]];
     [vc setMovieID:it.ID];
+    [self.navigationController pushViewController:vc animated:YES];
+     */
+    Subjects *it = [self.movieListSource objectAtIndex:[indexPath row]];
+    [vc setMovieID:it.id];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
