@@ -14,6 +14,9 @@
 #import "Subjects.h"
 #import "MovieDetailVC.h"
 #import "UIImageView+WebCache.h"
+#import "TopMovieItemCell.h"
+
+static NSString *TOPMOVIECELLIDENTIFIER = @"TOPMOVIECELL";
 
 @interface MovieListController ()<RTAPIManagerApiCallBackDelegate,RTAPIManagerValidator,RTAPIManagerParamSourceDelegate>
 @property (nonatomic,strong) MovieListAPI *movieListWebAPI;
@@ -33,6 +36,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //[self.tableView registerClass:[TopMovieItemCell class] forCellReuseIdentifier:TOPMOVIECELLIDENTIFIER];
+    
     [self.refreshController addTarget:self action:@selector(refreshFeed) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:self.refreshController];
     
@@ -116,6 +121,11 @@
     return 1;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 120.0f;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     // Return the number of rows in the section.
@@ -124,6 +134,7 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    /*
         static NSString *CellIdentifier = @"Cell";
     
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -132,16 +143,27 @@
                     initWithStyle:UITableViewCellStyleSubtitle
                     reuseIdentifier:CellIdentifier];
     }
+     */
+    
+    TopMovieItemCell *cell = [tableView dequeueReusableCellWithIdentifier:TOPMOVIECELLIDENTIFIER];
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"TopMovieItemCell" owner:self options:nil] objectAtIndex:0];
+    }
+    
     // Configure the cell...
     /*
     MovieItem *it = [self.movieListSource objectAtIndex:[indexPath row]];
     cell.textLabel.text = it.title;
     cell.detailTextLabel.text = it.original_title;
      */
+    /*
     Subjects *it = [self.movieListSource objectAtIndex:[indexPath row]];
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:it.images.small] placeholderImage:[UIImage imageNamed:@"placeholder"]];
     cell.textLabel.text = it.title;
     //cell.detailTextLabel.text = it.original_title;
+     */
+    Subjects *it = [self.movieListSource objectAtIndex:[indexPath row]];
+    [cell.PostImgView sd_setImageWithURL:[NSURL URLWithString:it.images.large] placeholderImage:[UIImage imageNamed:@"placeholder"]];
     return cell;
 }
 
