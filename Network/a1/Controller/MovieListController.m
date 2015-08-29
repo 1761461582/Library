@@ -80,7 +80,7 @@
     
     if ([manager isKindOfClass:[MovieListAPI class]]) {
         param =   @{@"start":@"0",
-                    @"count":@"250"};
+                    @"count":@"5"};
     }
     
     return param;
@@ -129,7 +129,7 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) {
             cell = [[UITableViewCell alloc]
-                    initWithStyle:/*UITableViewCellStyleSubtitle*/UITableViewCellStyleDefault
+                    initWithStyle:UITableViewCellStyleSubtitle
                     reuseIdentifier:CellIdentifier];
     }
     // Configure the cell...

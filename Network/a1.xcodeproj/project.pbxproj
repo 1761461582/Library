@@ -88,6 +88,8 @@
 		04C1C51F1B78E8A9007DE395 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1C51C1B78E8A9007DE395 /* JSONModel+networking.m */; };
 		04C1C5251B78E8C4007DE395 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1C5221B78E8C4007DE395 /* JSONKeyMapper.m */; };
 		04C1C5261B78E8C4007DE395 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1C5241B78E8C4007DE395 /* JSONValueTransformer.m */; };
+		04F66F2D1B91C1620097A7F3 /* TopMovieItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F66F2B1B91C1620097A7F3 /* TopMovieItemCell.m */; };
+		04F66F2E1B91C1620097A7F3 /* TopMovieItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F66F2C1B91C1620097A7F3 /* TopMovieItemCell.xib */; };
 		04F732A11B8DF47E00C7CE11 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F732811B8DF47E00C7CE11 /* MKAnnotationView+WebCache.m */; };
 		04F732A21B8DF47E00C7CE11 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F732831B8DF47E00C7CE11 /* NSData+ImageContentType.m */; };
 		04F732A31B8DF47E00C7CE11 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F732851B8DF47E00C7CE11 /* SDImageCache.m */; };
@@ -278,6 +280,9 @@
 		04C1C5221B78E8C4007DE395 /* JSONKeyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKeyMapper.m; path = JSONModel/JSONModelTransformations/JSONKeyMapper.m; sourceTree = "<group>"; };
 		04C1C5231B78E8C4007DE395 /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONValueTransformer.h; path = JSONModel/JSONModelTransformations/JSONValueTransformer.h; sourceTree = "<group>"; };
 		04C1C5241B78E8C4007DE395 /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONValueTransformer.m; path = JSONModel/JSONModelTransformations/JSONValueTransformer.m; sourceTree = "<group>"; };
+		04F66F2A1B91C1620097A7F3 /* TopMovieItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopMovieItemCell.h; path = View/TableViewCell/TopMovieItemCell.h; sourceTree = "<group>"; };
+		04F66F2B1B91C1620097A7F3 /* TopMovieItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopMovieItemCell.m; path = View/TableViewCell/TopMovieItemCell.m; sourceTree = "<group>"; };
+		04F66F2C1B91C1620097A7F3 /* TopMovieItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TopMovieItemCell.xib; path = View/TableViewCell/TopMovieItemCell.xib; sourceTree = "<group>"; };
 		04F732801B8DF47E00C7CE11 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKAnnotationView+WebCache.h"; path = "SDWebImage/MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		04F732811B8DF47E00C7CE11 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKAnnotationView+WebCache.m"; path = "SDWebImage/MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		04F732821B8DF47E00C7CE11 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "SDWebImage/NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -624,6 +629,7 @@
 		04A5F9521B67B61C00BA6440 /* a1 */ = {
 			isa = PBXGroup;
 			children = (
+				04F66F291B91BFD10097A7F3 /* View */,
 				04508ED61B6DC5F800028E10 /* Model */,
 				04508E951B6D799800028E10 /* Controller */,
 				0405EBC91B6CF155003D3EB1 /* Reformer */,
@@ -725,6 +731,16 @@
 				04C1C5241B78E8C4007DE395 /* JSONValueTransformer.m */,
 			);
 			name = JSONModelTransformations;
+			sourceTree = "<group>";
+		};
+		04F66F291B91BFD10097A7F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04F66F2A1B91C1620097A7F3 /* TopMovieItemCell.h */,
+				04F66F2B1B91C1620097A7F3 /* TopMovieItemCell.m */,
+				04F66F2C1B91C1620097A7F3 /* TopMovieItemCell.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		04F7327F1B8DF44500C7CE11 /* SDWebImage */ = {
@@ -848,6 +864,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A5F95F1B67B61C00BA6440 /* Main.storyboard in Resources */,
+				04F66F2E1B91C1620097A7F3 /* TopMovieItemCell.xib in Resources */,
 				04A5F9641B67B61C00BA6440 /* LaunchScreen.xib in Resources */,
 				046E0FE81B76CEFD00F3B3FD /* MovieDetailVC.xib in Resources */,
 				04A5F9611B67B61C00BA6440 /* Images.xcassets in Resources */,
@@ -938,6 +955,7 @@
 				0405EBB51B6C6B5A003D3EB1 /* AIFCityListManager.m in Sources */,
 				0405EBC11B6C6BA5003D3EB1 /* AIFLoggerConfiguration.m in Sources */,
 				04C1C51E1B78E8A9007DE395 /* JSONHTTPClient.m in Sources */,
+				04F66F2D1B91C1620097A7F3 /* TopMovieItemCell.m in Sources */,
 				04F732AC1B8DF47E00C7CE11 /* UIImage+MultiFormat.m in Sources */,
 				04F732A21B8DF47E00C7CE11 /* NSData+ImageContentType.m in Sources */,
 				0405EB901B6C6AAF003D3EB1 /* AIFUDIDGenerator.m in Sources */,
